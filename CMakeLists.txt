@@ -1026,7 +1026,7 @@ macro(curl_openssl_check_exists)
     endif()
     if(WIN32 AND NOT WINCE)
       list(APPEND CMAKE_REQUIRED_LIBRARIES "${_win32_winsock}")
-      list(APPEND CMAKE_REQUIRED_LIBRARIES "bcrypt")  # for OpenSSL/LibreSSL
+      list(APPEND CMAKE_REQUIRED_LIBRARIES "bcrypt" "crypt32")  # for OpenSSL/LibreSSL
     endif()
   endif()
   if(USE_WOLFSSL)
